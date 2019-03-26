@@ -1,7 +1,7 @@
 # mRNA pipeline: HISAT2_featureCounts
 
 This is a simple pipeline designed to perform intial stages of Illumina based mRNA sequencing.
-### NOTE: **The pipeline is designed with single-end reads only!**
+### NOTE: **The pipeline is designed for single-end reads only!**
 ### NOTE: **This is a gene level, not transcript level workflow.**
 
 ## The pipeline is based on Make and covers the following steps of mRNA-sequencing workflow:
@@ -51,7 +51,9 @@ They need to be in the PATH.
 * multiqc: https://multiqc.info/
 
 ## Auxiliary scripts
+
 *create_dir_tree.sh* - Run it in the project's directory to distribute the files across appropriate sub-folders.
+
 *map_stats_bam.sh* - Run it in bam/ directory to build mapping statistics table based on *samtools flagstat* output.
 
 
@@ -70,7 +72,7 @@ Then run:
     
     to create directory structure
 
-Optinal, change to *bam/* sub-folder and run 
+Optional, change to *bam/* sub-folder and run 
    
    ```../scripts/map_stats_bam.sh > map_stats.txt``` 
     
@@ -78,9 +80,13 @@ Optinal, change to *bam/* sub-folder and run
 
 # The following variables in the Makefile have to be changed to accomodate different reference genomes and library types.
 path_to_splice_site := <GENOMES/Homo_sapiens/Ensembl/GRCh37/Annotation/Genes/splicesites.txt>
+
 path_to_index := <GENOMES/Homo_sapiens/Ensembl/GRCh37/Sequence/HISAT2Index/genome>
+
 path_to_gtf := <GENOMES/Homo_sapiens/Ensembl/GRCh37/Annotation/Genes/genes.gtf>
+
 stranded := F
+
 stranded_count := 1
 
 

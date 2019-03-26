@@ -1,9 +1,9 @@
 .PHONY: init_qc trim_reads multiqc clean
 
 # Specify variables
-path_to_splice_site := /illumina/pipeline_in/GENOMES/Homo_sapiens/Ensembl/GRCh37/Annotation/Genes/splicesites.txt
-path_to_index := /illumina/pipeline_in/GENOMES/Homo_sapiens/Ensembl/GRCh37/Sequence/HISAT2Index/genome
-path_to_gtf := /illumina/pipeline_in/GENOMES/Homo_sapiens/Ensembl/GRCh37/Annotation/Genes/genes.gtf
+path_to_splice_site := <GENOMES/Homo_sapiens/Ensembl/GRCh37/Annotation/Genes/splicesites.txt>
+path_to_index := <GENOMES/Homo_sapiens/Ensembl/GRCh37/Sequence/HISAT2Index/genome>
+path_to_gtf := <GENOMES/Homo_sapiens/Ensembl/GRCh37/Annotation/Genes/genes.gtf>
 stranded := F
 stranded_count := 1
 trimmed_fastq := $(wildcard *.fq)

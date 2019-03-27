@@ -59,7 +59,13 @@ There has to be one FASTQ file per sample.
 Execute Makefile:
 Command: 
   
+  
   ```make all```
+  
+  ```make clean```
+
+To run in parallel:
+  ```make all -n <num_threads>```
 
 This will run all of the steps of the pipeline.
 Then run:

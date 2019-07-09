@@ -65,7 +65,7 @@ Command:
   ```make clean```
 
 To run in parallel:
-  ```make all -n <num_threads>```
+  ```make all -j <num_threads>```
 
 This will run all of the steps of the pipeline.
 Then run:
